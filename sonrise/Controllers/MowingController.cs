@@ -6,12 +6,11 @@ using System.Web.Mvc;
 
 namespace sonrise.Controllers
 {
-    public class HomeController : Controller
+    public class MowingController : Controller
     {
         public ActionResult Index()
         {
-            ViewBag.Title = "Irrigation Page";
-
+            ViewBag.Title = "Mowing Page";
             return View();
         }
     }

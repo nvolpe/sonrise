@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace sonrise.Controllers
 {
-    public class HomeController : Controller
+    public class IrrigationController : Controller
     {
         public ActionResult Index()
         {
