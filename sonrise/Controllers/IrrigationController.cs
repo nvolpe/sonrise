@@ -10,8 +10,7 @@ namespace sonrise.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Title = "Home Page";
-
+            ViewBag.Title = "Irrigation Page";
             return View();
         }
     }
