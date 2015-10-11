@@ -1,0 +1,171 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="box">
+            <div class="col-lg-12">
+                <hr>
+                <h2 class="intro-text text-center">
+                    Contact
+                    <strong>Sonrise Sprinklers and Landscape</strong>
+                </h2>
+                <hr>
+            </div>
+            <p>Our service area in blue</p>
+            <div id="map-canvas" class="col-md-8"></div>
+            <div class="col-md-4">
+                <p>Contact us anytime! Day or night!  We promise to always answer your call!</p>
+                <p>
+                    Owner:
+                    <strong>Dave Schellhase</strong>
+                </p>
+                <p>
+                    Phone:
+                    <strong>970.237.9509</strong>
+                </p>
+                <p>
+                    Email:
+                    <strong>sonrisesprinklers@gmail.com</strong>
+                </p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="box">
+            <div class="col-lg-12">
+                <hr>
+                <h2 class="intro-text text-center">
+                    Contact
+                    <strong>form</strong>
+                </h2>
+                <hr>
+                <form role="form">
+                    <div class="row">
+                        <div class="form-group col-lg-4">
+                            <label>Name</label>
+                            <input id="user-name" type="text" class="form-control">
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <label>Email Address</label>
+                            <input id="user-email" type="email" class="form-control">
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <label>Phone Number</label>
+                            <input id="user-phone" type="tel" class="form-control">
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="form-group col-lg-12">
+                            <label>Message</label>
+                            <textarea id="user-message" class="form-control" rows="6"></textarea>
+                        </div>
+                    </div>
+                </form>
+                <div class="form-group col-lg-12">
+                    <button id="submitEmail" class="btn btn-default">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="box">
+            <div class="col-lg-12">
+                <hr>
+                <h2 class="intro-text text-center">
+                    you are in
+                    <strong>good hands</strong>
+                </h2>
+                <hr>
+                <img class="img-responsive img-border nick-dave-carly" src="@Url.Content("~/Content/img/dave-and-carly.jpg")" alt="">
+                <hr class="visible-xs">
+                <p>Come back and visit us soon! We are excited about the future around here! Bigger and better things will be coming, so stay tuned.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.container -->
+
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+
+<script>
+        $(function () {
+            //Display the map
+
+            function loadMap() {
+                var mapOptions = {
+                    zoom: 9,
+                    center: new google.maps.LatLng(40.495861, -105.053351),
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+
+                var bermudaTriangle;
+
+                var map = new google.maps.Map(document.getElementById('map-canvas'),
+                    mapOptions);
+
+                // Define the LatLng coordinates for the polygon's path.
+                var triangleCoords = [
+
+                  new google.maps.LatLng(40.800321, -105.239121),
+                  new google.maps.LatLng(40.800321, -104.610841),
+                  new google.maps.LatLng(40.29474, -104.610841),
+                  new google.maps.LatLng(40.29474, -105.239121)
+                ];
+
+                // Construct the polygon.
+                bermudaTriangle = new google.maps.Polygon({
+                    paths: triangleCoords,
+                    strokeColor: '#000099',
+                    strokeOpacity: 0.8,
+                    strokeWeight: 2,
+                    fillColor: '#000099',
+                    fillOpacity: 0.15
+                });
+
+                bermudaTriangle.setMap(map);
+            }
+
+            google.maps.event.addDomListener(window, 'load', loadMap);
+
+            var userName,
+                userEmail,
+                userPhone,
+                emailSubject = "",
+                emailContent = "";
+
+
+            $('#submitEmail').click(function () {
+                console.log('Wazz good sonrise');
+
+                userName = $('#user-name').val();
+                userEmail = $('#user-email').val();
+                userPhone = $('#user-phone').val();
+                emailContent = $('#user-message').val();
+
+                $.ajax({
+                    type: "POST",
+                    url: "https://mandrillapp.com/api/1.0/messages/send.json",
+                    data: {
+                        key: "hKFEdSVO9Bw74DdrX6Fg1w",
+                        message: {
+                            from_email: userEmail,
+                            to: [
+                                {
+                                    email: "sonrisesprinklers@gmail.com",
+                                    name: "Dave",
+                                    type: "to"
+                                }
+                            ],
+                            autotext: true,
+                            subject: userName + ' ' + userPhone,
+                            html: emailContent
+                        }
+                    }
+                }).done(function (response) {
+                    console.log("finished");
+                }).fail(function (response) {
+                    console.log("failed");
+                })
+            });
+        });
+</script>

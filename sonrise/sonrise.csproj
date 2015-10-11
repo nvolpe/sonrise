@@ -20,6 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -196,13 +197,15 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\LandscapeController.cs" />
+    <Compile Include="Controllers\HolidayLightingController.cs" />
+    <Compile Include="Controllers\ContactUsController.cs" />
+    <Compile Include="Controllers\SnowRemovalController.cs" />
     <Compile Include="Controllers\MowingController.cs" />
     <Compile Include="Controllers\FertilizationController.cs" />
     <Compile Include="Controllers\AerationController.cs" />
     <Compile Include="Controllers\IrrigationController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -220,6 +223,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\img\%245-off-coupon.jpg" />
+    <Content Include="Content\img\angieslist.png" />
     <Content Include="Content\img\compressor-crop.jpg" />
     <Content Include="Content\img\compressor.jpg" />
     <Content Include="Content\img\croson hill yellow.bmp" />
@@ -229,6 +233,7 @@
     <Content Include="Content\img\dave-truck.jpg" />
     <Content Include="Content\img\fixed_sprinklers.jpg" />
     <Content Include="Content\img\Friends-and-Family-coupon.jpg" />
+    <Content Include="Content\img\Google_plus.png" />
     <Content Include="Content\img\grass-green-chaman.jpg" />
     <Content Include="Content\img\green-lawn.jpg" />
     <Content Include="Content\img\hunter.png" />
@@ -307,6 +312,10 @@
     <Content Include="Views\Aeration\Index.cshtml" />
     <Content Include="Views\Fertilization\Index.cshtml" />
     <Content Include="Views\Mowing\Index.cshtml" />
+    <Content Include="Views\ContactUs\Index.cshtml" />
+    <Content Include="Views\HolidayLighting\Index.cshtml" />
+    <Content Include="Views\Landscape\Index.cshtml" />
+    <Content Include="Views\SnowRemoval\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
