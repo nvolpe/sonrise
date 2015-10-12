@@ -6,7 +6,7 @@
 
 body {
     font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    background: url('../../Content/img/grass-green-chaman.jpg') no-repeat center center fixed;
+    background: url('../../Content/img/grass-green-chaman-small.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -133,6 +133,10 @@ footer p {
 
 #map-canvas {
     height: 350px;
+}
+
+.gallery {
+    padding-top: 10px;
 }
 
 
