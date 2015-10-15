@@ -10,7 +10,7 @@ namespace sonrise.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Title = "Home Page";
+            ViewBag.Title = "Fort Collins Landscaping Company | Sonrise Sprinklers and Landscape";
             return View();
         }
     }
