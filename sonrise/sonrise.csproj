@@ -230,6 +230,7 @@
     <Content Include="Content\img\croson hill yellow.bmp" />
     <Content Include="Content\img\croson-hill-yellow.jpg" />
     <Content Include="Content\img\dave-and-carly.jpg" />
+    <Content Include="Content\img\dave-truck-crop-ps.jpg" />
     <Content Include="Content\img\dave-truck-crop.jpg" />
     <Content Include="Content\img\dave-truck.jpg" />
     <Content Include="Content\img\favicon.png" />
@@ -252,6 +253,7 @@
     <Content Include="Content\img\map.jpg" />
     <Content Include="Content\img\Neighbor-coupon.jpg" />
     <Content Include="Content\img\photo1.JPG" />
+    <Content Include="Content\img\photo2-ps.jpg" />
     <Content Include="Content\img\photo2.JPG" />
     <Content Include="Content\img\photo3.JPG" />
     <Content Include="Content\img\photo4.JPG" />
