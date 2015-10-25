@@ -232,6 +232,7 @@
     <Content Include="Content\img\dave-and-carly.jpg" />
     <Content Include="Content\img\dave-truck-crop.jpg" />
     <Content Include="Content\img\dave-truck.jpg" />
+    <Content Include="Content\img\favicon.png" />
     <Content Include="Content\img\fixed_sprinklers.jpg" />
     <Content Include="Content\img\Friends-and-Family-coupon.jpg" />
     <Content Include="Content\img\gallery1.jpg" />
@@ -242,6 +243,7 @@
     <Content Include="Content\img\gallery6.jpg" />
     <Content Include="Content\img\gallery7.jpg" />
     <Content Include="Content\img\Google_plus.png" />
+    <Content Include="Content\img\grass-green-chaman-small.jpg" />
     <Content Include="Content\img\grass-green-chaman.jpg" />
     <Content Include="Content\img\green-lawn.jpg" />
     <Content Include="Content\img\hunter.png" />
