@@ -10,7 +10,7 @@ namespace sonrise.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Title = "Snow Removal Page";
+            ViewBag.Title = "Snow Removal Services | Sonrise Sprinklers Fort Collins & Loveland";
             return View();
         }
     }

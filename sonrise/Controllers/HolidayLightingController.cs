@@ -10,7 +10,7 @@ namespace sonrise.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Title = "Holiday Lighting Page";
+            ViewBag.Title = "Fort Collins Holiday Lighting & Christmas Light Installation: Sonrise";
             return View();
         }
     }
